@@ -2,17 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-​    <parent>
+    <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.1.RELEASE</version>
     </parent>
-​    <groupId>org.springframework.samples</groupId>
+    <groupId>org.springframework.samples</groupId>
     <artifactId>spring-petclinic-microservices</artifactId>
     <version>2.1.2</version>
     <name>${project.artifactId}</name>
     <packaging>pom</packaging>
-​    <modules>
+    <modules>
         <module>spring-petclinic-admin-server</module>
         <module>spring-petclinic-customers-service</module>
         <module>spring-petclinic-vets-service</module>
@@ -22,20 +22,20 @@
         <module>spring-petclinic-api-gateway</module>
         <module>spring-petclinic-hystrix-dashboard</module>
     </modules>
-​    <properties>
+    <properties>
         <java.version>11</java.version>
         <assertj.version>3.11.1</assertj.version>
-​        <spring-boot.version>2.1.2.RELEASE</spring-boot.version>
+        <spring-boot.version>2.1.2.RELEASE</spring-boot.version>
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
         <micrometer.version>1.0.5</micrometer.version>
-​        <maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
-​        <docker.image.prefix>springcommunity</docker.image.prefix>
+        <maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
+        <docker.image.prefix>springcommunity</docker.image.prefix>
         <docker.image.exposed.port>9090</docker.image.exposed.port>
         <docker.image.dockerfile.dir>${basedir}</docker.image.dockerfile.dir>
         <docker.image.dockerize.version>v0.6.1</docker.image.dockerize.version>
         <docker.plugin.version>1.2.0</docker.plugin.version>
     </properties>
-​  <dependencyManagement>
+    <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -62,9 +62,9 @@
                 <version>${assertj.version}</version>
                 <scope>test</scope>
             </dependency>
-​        </dependencies>
+        </dependencies>
     </dependencyManagement>
-​    <profiles>
+    <profiles>
         <profile>
             <id>springboot</id>
             <activation>
@@ -118,7 +118,7 @@
                             </execution>
                         </executions>
                     </plugin>
-​                    <!-- Spring Boot Actuator displays build-related information if a META-INF/build-info.properties file is present -->
+                    <!-- Spring Boot Actuator displays build-related information if a META-INF/build-info.properties file is present -->
                     <plugin>
                         <groupId>pl.project13.maven</groupId>
                         <artifactId>git-commit-id-plugin</artifactId>
@@ -140,8 +140,8 @@
                     </plugin>
                 </plugins>
             </build>
-​        </profile>
-​        <profile>
+        </profile>
+        <profile>
             <id>buildDocker</id>
             <build>
                 <pluginManagement>
@@ -182,11 +182,11 @@
             </build>
         </profile>
     </profiles>
-​    <repositories>
+    <repositories>
         <repository>
             <id>repository.spring.milestone</id>
             <name>Spring Milestone Repository</name>
             <url>http://repo.spring.io/milestone</url>
         </repository>
     </repositories>
-​</project>
+</project>
